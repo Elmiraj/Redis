@@ -54,7 +54,7 @@
         <!-- sidebar start -->
         <div class="admin-sidebar">
             <ul class="am-list admin-sidebar-list">
-                <li><a href="addStudent_1.jsp">添加</a> </li>
+                <li><a href="addStudent.jsp">添加</a> </li>
             </ul>
         </div>
         <!-- sidebar end -->
@@ -88,13 +88,16 @@
                                             <td>${student.birthday }</td>
                                             <td>${student.description }</td>
                                             <td>${student.avgscore }</td>
-                                            <td><a href="${pageContext.request.contextPath}
-                                            /Service?function=guideUpdateStudent&id=${student.id }">修改</a>
-                                                |<a href="${pageContext.request.contextPath}
-                                                /Service?function=deleteStudent&id=${student.id }">删除</a> </td>
+                                            <td><a href="${pageContext.request.contextPath}/Service?function=guideUpdateStudent&id=${student.id }">修改</a>
+                                                |<a href="${pageContext.request.contextPath}/Service?function=deleteStudent&id=${student.id }">删除</a> </td>
                                         </tr>
                                         </tbody>
                                     </c:forEach>
+                                </c:if>
+                                <c:if test="${empty requestScope.students}">
+                                    <div class="notFind">
+                                        没有找到数据，<a href="addStudent.jsp">点击</a>添加
+                                    </div>
                                 </c:if>
                             </table>
                             <div class="page">
@@ -108,11 +111,7 @@
                                 </div>
                             </div>
                         <%--</c:if>--%>
-                        <c:if test="${empty requestScope.students}">
-                            <div class="notFind">
-                                没有找到数据，<a href="addStudent_1.jsp">点击</a>添加
-                            </div>
-                        </c:if>
+
                     </form>
                 </div>
             </div>

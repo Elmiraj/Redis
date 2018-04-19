@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Student Management System</title>
-    <meta name="description" content="这是一个 index 页面">
+    <meta name="description" content="这是一个 add 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="renderer" content="webkit">
@@ -33,7 +33,7 @@
         <!-- sidebar start -->
         <div class="admin-sidebar">
             <ul class="am-list admin-sidebar-list">
-                <li>添加页面</li>
+                <li><a href="/redisStudentMgt/">主页</a> </li>
             </ul>
         </div>
         <!-- sidebar end -->
@@ -51,7 +51,7 @@
                             <label class="am-u-sm-3 am-form-label">学生ID / Student ID</label>
                             <div class="am-u-sm-9">
                                 <input type="text"
-                                       name="id" value="${requestScope.student.id}" placeholder="你的ID"/>
+                                       name="id" value="${requestScope.student.id}" placeholder="你的ID" autofocus required/>
                             </div>
                         </div>
                         <div class="am-form-group">
@@ -100,13 +100,14 @@
                                 </div>
                             </div>
                         </c:if>
+                        <c:if test="${not empty requestScope.feedback}">
+                            <div class="feedback" style="text-align: center" >
+                                输入错误
+                            </div>
+                        </c:if>
                     </form>
                 </div>
-                <c:if test="${not empty requestScope.feedback}">
-                    <div class="feedback">
-                       输入错误
-                    </div>
-                </c:if>
+
             </div>
         </div>
     </div>

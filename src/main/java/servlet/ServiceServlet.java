@@ -52,7 +52,7 @@ public class ServiceServlet extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 				request.setAttribute("feedback", "failure");
-				request.getRequestDispatcher("/addStudent_1.jsp").forward(
+				request.getRequestDispatcher("/addStudent.jsp").forward(
 						request, response);
 			}
 			break;
@@ -75,7 +75,7 @@ public class ServiceServlet extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 				request.setAttribute("feedback", "failure");
-				request.getRequestDispatcher("/addStudent_1.jsp").forward(
+				request.getRequestDispatcher("/addStudent.jsp").forward(
 						request, response);
 			}
 			break;
@@ -88,7 +88,7 @@ public class ServiceServlet extends HttpServlet {
 		case "guideUpdateStudent":
 			request.setAttribute("student",
 					getExistStudentById(request.getParameter("id")));
-			request.getRequestDispatcher("/addStudent_1.jsp").forward(request,
+			request.getRequestDispatcher("/addStudent.jsp").forward(request,
 					response);
 			break;
 		default:

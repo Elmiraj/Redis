@@ -39,7 +39,7 @@ public class InitServlet extends HttpServlet {
 				getExistStudent((Integer) request.getAttribute("page")));
 		request.setAttribute("pageCount", jedis.zcard("students") / 10
 				+ (0 == jedis.zcard("students") % 10 ? 0 : 1));
-		request.getRequestDispatcher("/index_1.jsp").forward(request, response);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
