@@ -23,7 +23,7 @@ import entities.Student;
  */
 
 public class InitServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -2752462877951888856L;
 	private Jedis jedis;
 
 	@Override

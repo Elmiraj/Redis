@@ -11,7 +11,7 @@ import java.sql.Date;
  */
 
 public class Student implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1002215459201217465L;
 
 	private String id;
 	private String name;

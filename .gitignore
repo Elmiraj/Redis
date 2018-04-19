@@ -243,4 +243,5 @@ GitHub.sublime-settings
 
 *.rdb
 
-.iml
+*.iml
+.idea
