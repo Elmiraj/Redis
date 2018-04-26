@@ -33,7 +33,7 @@
         <!-- sidebar start -->
         <div class="admin-sidebar">
             <ul class="am-list admin-sidebar-list">
-                <li><a href="/redisStudentMgt/">主页</a> </li>
+                <li><a href="/redisStudentMgt-1.0.0/">主页</a> </li>
             </ul>
         </div>
         <!-- sidebar end -->
